@@ -1,0 +1,18 @@
+ In a previous role, we encountered performance issues with Jenkins as the number of jobs and build frequency increased. The system was becoming sluggish, and builds were taking longer than expected. Here’s how I approached the situation:
+
+Situation:
+The Jenkins server was handling a large number of concurrent builds, which led to resource exhaustion and longer queue times.
+Build failures were becoming more common due to timeouts and resource constraints.
+
+I analyzed existing jobs to identify those that could be optimized. For instance, unnecessary build steps were removed, and redundant tests were consolidated.
+We also moved some long-running jobs to a separate Jenkins instance, effectively distributing the workload.
+Using Parallel Builds:
+
+I implemented parallel execution of jobs where possible, using the Jenkins Pipeline feature. This allowed multiple jobs to run simultaneously, reducing overall build time.
+Build Node Configuration:
+
+I set up additional build agents (nodes) to handle increased workloads. This distributed the builds across multiple agents, allowing for better resource utilization.
+Configured labels for nodes to ensure specific jobs ran on nodes with the required resources.
+Implementing Caching:
+
+I introduced caching mechanisms for dependencies (like Maven or npm) to reduce build time. This minimized the need for downloading dependencies during each build.
