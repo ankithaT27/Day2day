@@ -15,4 +15,7 @@ I set up additional build agents (nodes) to handle increased workloads. This dis
 Configured labels for nodes to ensure specific jobs ran on nodes with the required resources.
 Implementing Caching:
 
-I introduced caching mechanisms for dependencies (like Maven or npm) to reduce build time. This minimized the need for downloading dependencies during each build.
+
+
+
+Engineered and maintained a microservices architecture for a Black Duck application, leveraging Docker Compose to orchestrate 13 services, including database, caching, authentication, and web applications, resulting in improved scalability and resilience in deployment, ultimately enhancing system performance and reliability.
